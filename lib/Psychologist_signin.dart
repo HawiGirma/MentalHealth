@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'User_signin.dart';
+import 'Login_page.dart';
 
 class PsychoPage extends StatefulWidget {
   const PsychoPage({Key? key}) : super(key: key);
@@ -448,7 +449,13 @@ class _DropdownMenuPageState extends State<DropdownMenuPage> {
                     const SizedBox(height: 16),
                     Center(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
                         child: Text('Already have an account? Sign in',
                             style: TextStyle(
                                 color: Theme.of(context).primaryColor),

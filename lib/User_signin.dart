@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'Psychologist_signin.dart';
+import 'Login_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -559,7 +560,13 @@ class _LastPageState extends State<LastPage> {
                     const SizedBox(height: 16),
                     Center(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
                         child: Text('Already have an account? Sign in',
                             style: TextStyle(
                                 color: Theme.of(context).primaryColor),
