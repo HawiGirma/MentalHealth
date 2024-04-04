@@ -543,7 +543,13 @@ class _LastPageState extends State<LastPage> {
                         ),
                         const SizedBox(height: 16),
                         OutlinedButton(
-                          onPressed: password ? _registrar : null,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PsychoPage()),
+                            );
+                          },
                           child: Text(
                             'Sign in as Psychologist',
                             style: TextStyle(fontSize: 14),
